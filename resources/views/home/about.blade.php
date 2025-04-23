@@ -3,254 +3,789 @@
 
 <head>
     <meta charset="utf-8">
+    <title>About - Vastech</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Home Pages</title>
-    <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="icon" href="{{asset('assets/img/vastech.svg')}}" type="image/x-icon">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap"
         rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/lib/animate/animate.min.css') }}" />
+    <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
-<body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<body>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <h1 class="sitename">Peter</h1> <span>.</span>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about" class="active">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-    </header>
+    </div>
+    <!-- Spinner End -->
 
-    <main class="main">
-        <!-- Constructions Section -->
-        <section id="constructions" class="section">
-        </section><!-- /Constructions Section -->
-
-        <!-- Services Section -->
-        <section id="services" class="services section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item  position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-mountain-city"></i>
-                            </div>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
-                                iure perferendis tempore et consequatur.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <div class="border-end border-primary pe-3">
+                            <a href="#" class="text-muted small"><i
+                                    class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-                            </div>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
-                                hic non ut nesciunt dolorem.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+                        <div class="ps-3">
+                            <a href="mailto:example@gmail.com" class="text-muted small"><i
+                                    class="fas fa-envelope text-primary me-2"></i>example@gmail.com</a>
                         </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-compass-drafting"></i>
-                            </div>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
-                                voluptas adipisci eos earum corrupti.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-trowel-bricks"></i>
-                            </div>
-                            <h3>Asperiores Commodit</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
-                                sit provident adipisci neque.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-helmet-safety"></i>
-                            </div>
-                            <h3>Velit Doloremque</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
-                                animi at autem alias eius labore.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-item position-relative">
-                            <div class="icon">
-                                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
-                            </div>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
-                                Corrupti recusandae ducimus enim.</p>
-                            <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div><!-- End Service Item -->
-
+                    </div>
                 </div>
-
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex justify-content-end">
+                        <div class="d-flex border-end border-primary pe-3">
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="dropdown ms-3">
+                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i
+                                        class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item">English</a>
+                                <a href="#" class="dropdown-item">Bangla</a>
+                                <a href="#" class="dropdown-item">French</a>
+                                <a href="#" class="dropdown-item">Spanish</a>
+                                <a href="#" class="dropdown-item">Arabic</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
-        </section><!-- /Services Section -->
-
-    </main>
-
-    <footer id="footer" class="footer">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">UpConstruction</span>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="#" class="navbar-brand p-0">
+                    <h1 class="text-primary mb-0"><i class="fab fa-slack me-2"></i> LifeSure</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-0 mx-lg-auto">
+                        <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link active">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Pages</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="feature.html" class="dropdown-item">Our Features</a>
+                                <a href="team.html" class="dropdown-item">Our team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="FAQ.html" class="dropdown-item">FAQs</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <div class="nav-btn px-3">
+                            <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0"
+                                data-bs-toggle="modal" data-bs-target="#searchModal"><i
+                                    class="fas fa-search"></i></button>
+                            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Get a
+                                Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                    <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
+                        data-wow-delay=".9s">
+                        <i class="fa fa-phone-alt fa-2x"></i>
+                        <div class="position-absolute" style="top: 7px; right: 12px;">
+                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                        </div>
                     </a>
-                    <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
-                    </div>
-                    <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    <div class="d-flex flex-column ms-3">
+                        <span>Call to Our Experts</span>
+                        <a href="tel:+ 0123 456 7890"><span class="text-dark">Free: + 0123 456 7890</span></a>
                     </div>
                 </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                    </ul>
+    <!-- Modal Search Start -->
+    {{-- <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                    </ul>
+                <div class="modal-body d-flex align-items-center bg-primary">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords"
+                            aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i
+                                class="fa fa-search"></i></span>
+                    </div>
                 </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Hic solutasetp</h4>
-                    <ul>
-                        <li><a href="#">Molestiae accusamus iure</a></li>
-                        <li><a href="#">Excepturi dignissimos</a></li>
-                        <li><a href="#">Suscipit distinctio</a></li>
-                        <li><a href="#">Dilecta</a></li>
-                        <li><a href="#">Sit quas consectetur</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Nobis illum</h4>
-                    <ul>
-                        <li><a href="#">Ipsam</a></li>
-                        <li><a href="#">Laudantium dolorum</a></li>
-                        <li><a href="#">Dinera</a></li>
-                        <li><a href="#">Trodelas</a></li>
-                        <li><a href="#">Flexo</a></li>
-                    </ul>
-                </div>
-
             </div>
         </div>
+    </div> --}}
+    <!-- Modal Search End -->
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">UpConstruction</strong> <span>All Rights
-                    Reserved</span></p>
-            <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    <style>
+        .header-about {
+            background-image: url('{{ asset('assets/img/bg-5.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <!-- Carousel Start -->
+    <div class="container-fluid bg-dark">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item text-white"><a href="{{ route('home') }}">Home</a></li>
+                <li class="breadcrumb-item active">About</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light about py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-item-content bg-white rounded p-5 h-100">
+                        <h4 class="text-primary">About Our Company</h4>
+                        <h1 class="display-4 mb-4">High Range of Exploring Protection</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt debitis sint tempora. Corporis
+                            consequatur illo blanditiis voluptates aperiam quos aliquam totam aliquid rem explicabo,
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium recusandae
+                            eligendi
+                            modi hic
+                        </p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We can save your money.</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Production or trading of good
+                        </p>
+                        <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Our life insurance is
+                            flexible</p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12">
+                                <div class="rounded bg-light">
+                                    <img src="{{ asset('assets/img/about-1.png') }}" class="img-fluid rounded w-100"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">Insurance Policies</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">Awards WON</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">Skilled Agents</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">Team Members</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- About End -->
 
-    </footer>
+    <!-- Feature Start -->
+    <div class="container-fluid feature bg-light pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Features</h4>
+                <h1 class="display-4 mb-4">Insurance Provide you a Better Future</h1>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
+                    cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt
+                    sint
+                    dolorem autem obcaecati, ipsam mollitia hic.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="far fa-handshake fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Trusted Company</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-dollar-sign fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Anytime Money Back</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-bullseye fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Flexible Plans</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-headphones fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">24/7 Fast Support</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <!-- FAQs Start -->
+    <div class="container-fluid feature bg-light pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Features</h4>
+                <h1 class="display-4 mb-4">Insurance Provide you a Better Future</h1>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
+                    cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt
+                    sint
+                    dolorem autem obcaecati, ipsam mollitia hic.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="far fa-handshake fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Trusted Company</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-dollar-sign fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Anytime Money Back</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-bullseye fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">Flexible Plans</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4 pt-0">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fa fa-headphones fa-3x"></i>
+                        </div>
+                        <h4 class="mb-4">24/7 Fast Support</h4>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit
+                            pariatur...
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQs End -->
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    <!-- Blog Start -->
+    <div class="container-fluid blog py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">From Blog</h4>
+                <h1 class="display-4 mb-4">News And Updates</h1>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
+                    cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt
+                    sint dolorem autem obcaecati, ipsam mollitia hic.
+                </p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-1.png" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Which allows you to pay down insurance bills</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-2.png" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-3.png" class="img-fluid rounded-top w-100" alt="">
+                            <div class="blog-categiry py-2 px-4">
+                                <span>Business</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="blog-comment d-flex justify-content-between mb-3">
+                                <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                                <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                            </div>
+                            <a href="#" class="h4 d-inline-block mb-3">Leverage agile frameworks to provide</a>
+                            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta
+                                impedit eligendi? Quibusdam, laudantium.</p>
+                            <a href="#" class="btn p-0">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <!-- Team Start -->
+    <div class="container-fluid team pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Team</h4>
+                <h1 class="display-4 mb-4">Meet Our Expert Team Members</h1>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis
+                    cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt
+                    sint dolorem autem obcaecati, ipsam mollitia hic.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">David James</h4>
+                            <p class="mb-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">David James</h4>
+                            <p class="mb-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">David James</h4>
+                            <p class="mb-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-icon">
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-pill mb-0" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-title p-4">
+                            <h4 class="mb-0">David James</h4>
+                            <p class="mb-0">Profession</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-9">
+                    <div class="mb-5">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-5">
+                                <div class="footer-item">
+                                    <a href="index.html" class="p-0">
+                                        <h3 class="text-white"><i class="fab fa-slack me-3"></i> LifeSure</h3>
+                                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                                    </a>
+                                    <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr
+                                        est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                                    <div class="footer-btn d-flex">
+                                        <a class="btn btn-md-square rounded-circle me-3" href="#"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3" href="#"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3" href="#"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-0" href="#"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Useful Links</h4>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Features</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ's</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Blogs</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <h4 class="mb-4 text-white">Instagram</h4>
+                                    <div class="row g-3">
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-1.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-1.jpg"
+                                                        data-lightbox="footerInstagram-1" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-2.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-2.jpg"
+                                                        data-lightbox="footerInstagram-2" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-3.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-3.jpg"
+                                                        data-lightbox="footerInstagram-3" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-4.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-4.jpg"
+                                                        data-lightbox="footerInstagram-4" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-5.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-5.jpg"
+                                                        data-lightbox="footerInstagram-5" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instagram-footer-6.jpg" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="img/instagram-footer-6.jpg"
+                                                        data-lightbox="footerInstagram-6" class="my-auto"><i
+                                                            class="fas fa-link text-white"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="row g-0">
+                            <div class="col-12">
+                                <div class="row g-4">
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Address</h4>
+                                                <p class="mb-0">123 Street New York.USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-envelope fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Mail Us</h4>
+                                                <p class="mb-0">info@example.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fa fa-phone-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Telephone</h4>
+                                                <p class="mb-0">(+012) 3456 7890</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="position-relative rounded-pill mb-4">
+                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Enter your email">
+                            <button type="button"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                        </div>
+                        <div class="d-flex flex-shrink-0">
+                            <div class="footer-btn">
+                                <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada"
+                                    data-wow-delay=".9s">
+                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                    <div class="position-absolute" style="top: 2px; right: 12px;">
+                                        <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                <span>Call to Our Experts</span>
+                                <a href="tel:+ 0123 456 7890"><span class="text-white">Free: + 0123 456 7890</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right
+                        reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-start text-body">
+                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+                    Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

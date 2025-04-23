@@ -8,7 +8,6 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link rel="icon" href="{{asset('assets/img/vastech.svg')}}" type="image/x-icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +21,7 @@
     <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    </style>
 </head>
 
 <body>
@@ -91,8 +91,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-0 mx-lg-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="blog.html" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
@@ -114,6 +114,12 @@
                                 title="search" data-bs-toggle="modal" data-bs-target="#searchModal">
                                 <i class="fas fa-search"></i>
                             </button>
+                            {{-- <button type="button" id="themeToggle" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Mode</button> --}}
+                            {{-- <input type="text" id="themeToggle" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0" value="Mode"> --}}
+                            <div class="form-check form-switch mt-3">
+                                <input class="form-check-input" type="checkbox" :value="darkMode" @change="darkMode = !darkMode">
+                                <label class="form-check-label" for="themeToggle">Dark Mode</label>
+                            </div>
 
                         </div>
                     </div>
@@ -162,10 +168,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;" --}}
+    <style>
+        .header-home{
+            background-image: url('{{ asset('assets/img/bg-7.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 
     <!-- Carousel Start -->
     <div class="header-carousel owl-carousel">
-        <div class="header-carousel-item bg-primary">
+        <div class="header-carousel-item bg-dark">
             <div class="carousel-caption">
                 <div class="container">
                     <div class="row g-4 align-items-center">
@@ -193,7 +207,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-carousel-item bg-primary">
+        <div class="header-carousel-item bg-dark">
             <div class="carousel-caption">
                 <div class="container">
                     <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
@@ -1031,6 +1045,27 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const htmlElement = document.documentElement;
+
+            // Inisialisasi tema
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-bs-theme', savedTheme);
+            themeToggle.checked = savedTheme === 'dark';
+
+            // Handle toggle
+            themeToggle.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                htmlElement.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // Untuk debugging
+                console.log('Theme changed to:', newTheme);
+            });
+        });
+    </script>
 </body>
 
 </html>

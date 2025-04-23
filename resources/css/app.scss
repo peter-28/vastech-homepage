@@ -1,0 +1,25 @@
+@import "bootstrap/scss/bootstrap";
+
+// Set default light theme
+:root {
+  --bs-body-bg: #ffffff; // Warna default light mode
+}
+
+// Dark theme override
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529;
+  
+  // Pastikan body mengambil warna tema
+  body {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color);
+  }
+}
+
+// Force body to use theme colors
+body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  min-height: 100vh; // Pastikan full height
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
